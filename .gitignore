@@ -1,0 +1,11 @@
+/runtime
+/.idea
+/.vscode
+/vendor
+*.log
+.env
+/tests/tmp
+/tests/.phpunit.result.cache
+.DS_Store
+auto.json
+composer.lock

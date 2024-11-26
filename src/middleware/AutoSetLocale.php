@@ -1,0 +1,18 @@
+<?php
+
+namespace Jizhi\Admin\middleware;
+
+use Webman\Http\Request;
+use Webman\Http\Response;
+use Webman\MiddlewareInterface;
+
+class AutoSetLocale implements MiddlewareInterface
+{
+    public function process(Request $request, callable $handler): Response
+    {
+        $locale = request()->header('locale', config('plugin.jizhi.admin.translation.locale')); // 获取客户端要求的语言包
+        // 切换语言
+        locale($locale);
+        return $handler($request);
+    }
+}
