@@ -1,6 +1,7 @@
 {
   "name": "jizhi/amis-webman",
   "description": "基于 OwlAdmin 修改的 Webman",
+  "version": "4.0.6",
   "authors": [
     {
       "name": "sym",
