@@ -41,7 +41,7 @@ return [
 ## 安装
 
 ```shell
-composer require jizhi/admin
+composer require jizhi/amis-webman
 ```
 
 ## 配置 .env （按需添加）
