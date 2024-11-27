@@ -10,9 +10,11 @@ class AutoSetLocale implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        $locale = request()->header('locale', config('plugin.jizhi.admin.translation.locale')); // 获取客户端要求的语言包
-        // 切换语言
-        locale($locale);
+        if (strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
+            $locale = request()->header('locale', config('plugin.jizhi.admin.admin.translation.locale')); // 获取客户端要求的语言包
+            // 切换语言
+            locale($locale);
+        }
         return $handler($request);
     }
 }

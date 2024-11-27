@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'admin' => \Jizhi\Admin\Admin::middleware(),
+    '' => \Jizhi\Admin\Admin::middleware(),
 ];

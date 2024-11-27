@@ -413,7 +413,7 @@ class Database
             "image_type"  => "jpg,jpeg,png,gif,svg,bmp",
             "engine"      => "local",
             "local"       => [
-                "domain" => "http://0.0.0.0:8787",
+                "domain" => "http://127.0.0.1:8787",
                 "path"   => "public",
             ],
         ]);

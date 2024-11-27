@@ -5,6 +5,7 @@ namespace Jizhi\Admin\middleware;
 use Webman\Http\Request;
 use Webman\Http\Response;
 use Webman\MiddlewareInterface;
+
 // use plugin\saas\model\TenantModel;
 use Jizhi\Admin\support\SqlRecord;
 
@@ -21,8 +22,10 @@ class ConnectionDatabase implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        if (config('app.debug')){
-            SqlRecord::$sql = []; // 清空sql记录
+        if (strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
+            if (config('app.debug')) {
+                SqlRecord::$sql = []; // 清空sql记录
+            }
         }
         // $request->header('x-site-domain')
         // $domain = $request->host(true)?? 'https://newtrain.tinywan.com';

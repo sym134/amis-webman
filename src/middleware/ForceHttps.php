@@ -11,8 +11,10 @@ class ForceHttps implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        if ($request->protocolVersion() === '1.1' && Admin::config('admin.https')) {
-            return Admin::response()->additional(['code' => 301])->fail('请使用https');
+        if (strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
+            if ($request->protocolVersion() === '1.1' && Admin::config('admin.https')) {
+                return Admin::response()->additional(['code' => 301])->fail('请使用https');
+            }
         }
 
         return $handler($request);

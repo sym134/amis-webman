@@ -31,7 +31,7 @@ class IndexController extends AdminController
             'nav'      => Admin::getNav(),
             'assets'   => Admin::getAssets(),
             'app_name' => Admin::config('admin.name'),
-            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.translation.locale')), // webman
+            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.admin.translation.locale')), // webman
             'layout'   => Admin::config('admin.layout'),
             'logo'     => url(Admin::config('admin.logo')),
 
