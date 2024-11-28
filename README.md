@@ -80,6 +80,17 @@ DB_CONNECTION=mysql
     // ........
 ```
 
+### ShopwwiAuthCommand 错误解决
+```php
+// 路径 app/command/ShopwwiAuthCommand.php
+
+protected function execute(InputInterface $input, OutputInterface $output)
+
+替换为
+
+protected function execute(InputInterface $input, OutputInterface $output):int
+```
+
 ## 安装数据
 ```shell
 php webman admin:install
@@ -99,4 +110,3 @@ http://127.0.0.1:8780/admin
 ## 常见问题
 ### 相片路径
 打开后台》系统管理 / 存储设置，修改【域名】
-
