@@ -241,7 +241,7 @@ class CodeGeneratorController extends AdminController
                                     ->description(admin_trans('admin.code_generators.primary_key_description'))
                                     ->required(),
                                 amis()
-                                    ->SelectControl('save_path', admin_trans('admin.code_generators.save_path_select'))
+                                    ->SelectControl('save_path', admin_trans('admin.code_generators.save_path_select'))->required()
                                     ->clearable()
                                     ->searchable()
                                     ->description(admin_trans('admin.code_generators.save_path_select_tips'))
