@@ -22,7 +22,7 @@ class ConnectionDatabase implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        if (strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
+        if (!is_null($request->route) && strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
             if (config('app.debug')) {
                 SqlRecord::$sql = []; // 清空sql记录
             }
