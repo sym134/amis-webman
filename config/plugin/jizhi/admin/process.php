@@ -1,6 +1,6 @@
 <?php
 
-use Jizhi\Admin\process\Task;
+use jizhi\admin\process\Task;
 
 return [
     'task'  => [

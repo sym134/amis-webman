@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\command;
+namespace jizhi\admin\command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * 创建插件
  * AppPluginCreateCommand
- * Jizhi\Admin\command
+ * jizhi\admin\command
  *
  * Author:sym
  * Date:2024/6/18 上午10:32
@@ -103,8 +103,8 @@ class AppPluginCreateCommand extends Command
 namespace plugin\\$name\\app\\controller;
 
 use support\\Request;
-use Jizhi\Admin\service\AdminApiService;
-use Jizhi\Admin\controller\AdminController;
+use jizhi\admin\service\AdminApiService;
+use jizhi\admin\controller\AdminController;
 use support\Response;
 
 class IndexController  extends AdminController
@@ -474,7 +474,7 @@ EOF;
 <?php
 
 return [
-        '' => \Jizhi\Admin\Admin::middleware(),
+        '' => \jizhi\admin\Admin::middleware(),
 ];
 
 EOF;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Support\Collection;
-use Jizhi\Admin\service\StorageService;
+use jizhi\admin\service\StorageService;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 

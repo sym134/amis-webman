@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Response;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\renderer\Card;
-use Jizhi\Admin\renderer\Panel;
+use jizhi\admin\Admin;
+use jizhi\admin\renderer\Card;
+use jizhi\admin\renderer\Panel;
 
 class HomeController extends AdminController
 {

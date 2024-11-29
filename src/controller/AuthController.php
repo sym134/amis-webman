@@ -1,15 +1,15 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Request;
 use support\Response;
+use jizhi\admin\Admin;
 use Webman\Event\Event;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\utils\Hash;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\support\Captcha;
-use Jizhi\Admin\service\AdminUserService;
+use jizhi\admin\facade\Hash;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\support\Captcha;
+use jizhi\admin\service\AdminUserService;
 
 class AuthController extends AdminController
 {

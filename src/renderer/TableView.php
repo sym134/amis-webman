@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 /**
  * Table View 表格展现

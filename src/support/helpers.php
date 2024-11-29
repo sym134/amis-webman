@@ -1,12 +1,12 @@
 <?php
 
 use support\Container;
-use Jizhi\Admin\service\StorageService;
+use jizhi\admin\service\StorageService;
 
 if (!function_exists('admin_url')) {
     function admin_url($path = null, $needPrefix = false): string
     {
-        $prefix = $needPrefix ? '/' . \Jizhi\Admin\Admin::config('admin.route.prefix') : ''; // webman
+        $prefix = $needPrefix ? '/' . \jizhi\admin\Admin::config('admin.route.prefix') : ''; // webman
 
         return $prefix . '/' . trim($path, '/');
     }
@@ -61,7 +61,7 @@ if (!function_exists('admin_resource_full_path')) {
         } else if ($server) {
             $src = rtrim($server, '/') . '/' . ltrim($path, '/');
         } else {
-            $disk = \Jizhi\Admin\Admin::config('admin.upload.disk');
+            $disk = \jizhi\admin\Admin::config('admin.upload.disk');
 
             if (config("filesystems.disks.{$disk}")) {
                 $src = StorageService::disk()->url($path);
@@ -70,7 +70,7 @@ if (!function_exists('admin_resource_full_path')) {
             }
         }
         $scheme = 'http:';
-        if (\Jizhi\Admin\Admin::config('admin.https', false)) {
+        if (\jizhi\admin\Admin::config('admin.https', false)) {
             $scheme = 'https:';
         }
         return preg_replace('/^http[s]{0,1}:/', $scheme, $src, 1);
@@ -89,26 +89,26 @@ if (!function_exists('amis')) {
     /**
      * @param $type
      *
-     * @return \Jizhi\Admin\renderer\Amis|\Jizhi\Admin\renderer\Component
+     * @return \jizhi\admin\renderer\Amis|\jizhi\admin\renderer\Component
      */
-    function amis($type = null): \Jizhi\Admin\renderer\Amis|\Jizhi\Admin\renderer\Component
+    function amis($type = null): \jizhi\admin\renderer\Amis|\jizhi\admin\renderer\Component
     {
         if (filled($type)) {
-            return \Jizhi\Admin\renderer\Component::make()->setType($type); // webman
+            return \jizhi\admin\renderer\Component::make()->setType($type); // webman
         }
 
-        return \Jizhi\Admin\renderer\Amis::make();
+        return \jizhi\admin\renderer\Amis::make();
     }
 }
 
 if (!function_exists('amisMake')) {
     /**
-     * @return \Jizhi\Admin\renderer\Amis
+     * @return \jizhi\admin\renderer\Amis
      * @deprecated
      */
-    function amisMake(): \Jizhi\Admin\renderer\Amis
+    function amisMake(): \jizhi\admin\renderer\Amis
     {
-        return \Jizhi\Admin\renderer\Amis::make();
+        return \jizhi\admin\renderer\Amis::make();
     }
 }
 
@@ -172,9 +172,9 @@ if (!function_exists('is_json')) {
 }
 
 if (!function_exists('settings')) {
-    function settings(): \Jizhi\Admin\service\AdminSettingService
+    function settings(): \jizhi\admin\service\AdminSettingService
     {
-        return \Jizhi\Admin\service\AdminSettingService::make();
+        return \jizhi\admin\service\AdminSettingService::make();
     }
 }
 
@@ -195,9 +195,9 @@ if (!function_exists('admin_extension_path')) {
 }
 
 if (!function_exists('admin_user')) {
-    function admin_user(): \Jizhi\Admin\model\AdminUser|\Illuminate\Contracts\Auth\Authenticatable|null
+    function admin_user(): \jizhi\admin\model\AdminUser|\Illuminate\Contracts\Auth\Authenticatable|null
     {
-        return \Jizhi\Admin\Admin::user();
+        return \jizhi\admin\Admin::user();
     }
 }
 
@@ -214,7 +214,7 @@ if (!function_exists('admin_abort')) {
      */
     function admin_abort(string $message = '', array $data = [], int $doNotDisplayToast = 0): mixed
     {
-        throw new \Jizhi\Admin\exception\AdminException($message, $data, $doNotDisplayToast);
+        throw new \jizhi\admin\exception\AdminException($message, $data, $doNotDisplayToast);
     }
 
     function amis_abort($message = '', $data = []): void
@@ -257,7 +257,7 @@ if (!function_exists('admin_path')) {
 if (!function_exists('admin_pages')) {
     function admin_pages($sign)
     {
-        return \Jizhi\Admin\service\AdminPageService::make()->get($sign);
+        return \jizhi\admin\service\AdminPageService::make()->get($sign);
     }
 }
 
@@ -340,9 +340,9 @@ if (!function_exists('database_path')) {
 }
 
 if (!function_exists('cache')) {
-    function cache(): \Jizhi\Admin\utils\Cache
+    function cache(): \jizhi\admin\facade\Cache
     {
-        return new \Jizhi\Admin\utils\Cache();
+        return new \jizhi\admin\facade\Cache();
     }
 }
 
@@ -368,6 +368,6 @@ if (!function_exists('safe_explode')) {
 if (!function_exists('admin_pipeline')) {
     function admin_pipeline($passable)
     {
-        return \Jizhi\Admin\support\Pipeline::handle($passable);
+        return \jizhi\admin\support\Pipeline::handle($passable);
     }
 }

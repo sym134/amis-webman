@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\service\system;
+namespace jizhi\admin\service\system;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\model\system\Config;
+use jizhi\admin\model\system\Config;
 use Illuminate\Database\Eloquent\Collection;
-use Jizhi\Admin\service\AdminService;
+use jizhi\admin\service\AdminService;
 
 class StorageService extends AdminService
 {

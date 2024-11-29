@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
 use Throwable;
 use support\Response;
 use Illuminate\Support\Str;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\service\StorageService;
-use Jizhi\Admin\service\system\AttachmentService;
+use jizhi\admin\Admin;
+use jizhi\admin\service\StorageService;
+use jizhi\admin\service\system\AttachmentService;
 
 trait UploadTrait
 {

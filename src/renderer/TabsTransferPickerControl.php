@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 /**
  * TabsTransferPicker 穿梭器的弹框形态 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/form/tabs-transfer-picker

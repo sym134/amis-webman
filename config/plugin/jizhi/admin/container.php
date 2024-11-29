@@ -1,16 +1,16 @@
 <?php
 
 use Illuminate\Filesystem\Filesystem;
-use Jizhi\Admin\support\Cores\Menu;
-use Jizhi\Admin\support\Cores\Asset;
-use Jizhi\Admin\support\Pipeline;
-use Jizhi\Admin\support\Cores\Context;
-use Jizhi\Admin\support\Apis\DataListApi;
-use Jizhi\Admin\support\Apis\DataCreateApi;
-use Jizhi\Admin\support\Apis\DataDetailApi;
-use Jizhi\Admin\support\Apis\DataDeleteApi;
-use Jizhi\Admin\support\Apis\DataUpdateApi;
-use Jizhi\Admin\service\AdminSettingService;
+use jizhi\admin\support\cores\Menu;
+use jizhi\admin\support\cores\Asset;
+use jizhi\admin\support\Pipeline;
+use jizhi\admin\support\cores\Context;
+use jizhi\admin\support\apis\DataListApi;
+use jizhi\admin\support\apis\DataCreateApi;
+use jizhi\admin\support\apis\DataDetailApi;
+use jizhi\admin\support\apis\DataDeleteApi;
+use jizhi\admin\support\apis\DataUpdateApi;
+use jizhi\admin\service\AdminSettingService;
 
 $builder = new \DI\ContainerBuilder();
 $builder->addDefinitions([

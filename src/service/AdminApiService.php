@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
-use Jizhi\Admin\model\AdminApi;
+use jizhi\admin\model\AdminApi;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\model\AdminCodeGenerator;
-use Jizhi\Admin\support\CodeGenerator\RouteGenerator;
+use jizhi\admin\model\AdminCodeGenerator;
+use jizhi\admin\support\code_generator\RouteGenerator;
 
 /**
  * @method AdminApi getModel()

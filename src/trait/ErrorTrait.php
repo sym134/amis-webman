@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
 /**
  * 错误信息Trait类

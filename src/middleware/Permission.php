@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\middleware;
+namespace jizhi\admin\middleware;
 
 use Webman\Http\Request;
 use Webman\Http\Response;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Webman\MiddlewareInterface;
 
 class Permission implements MiddlewareInterface

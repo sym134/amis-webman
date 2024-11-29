@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\console;
+namespace jizhi\admin\console;
 
 use Illuminate\Console\Command;
-use Jizhi\Admin\service\AdminApiService;
-use Jizhi\Admin\service\AdminCodeGeneratorService;
-use Jizhi\Admin\support\CodeGenerator\ControllerGenerator;
+use jizhi\admin\service\AdminApiService;
+use jizhi\admin\service\AdminCodeGeneratorService;
+use jizhi\admin\support\code_generator\ControllerGenerator;
 
 class GenRouteCommand extends Command
 {
@@ -26,7 +26,7 @@ class GenRouteCommand extends Command
 
 // =====================================================================
 
-use Jizhi\Admin\Admin;use Illuminate\Routing\Router;use Illuminate\Support\Facades\Route;
+use jizhi\admin\Admin;use Illuminate\Routing\Router;use Illuminate\Support\Facades\Route;
 
 Route::group([
     'domain'     => Admin::config('admin.route.domain'),
@@ -77,7 +77,7 @@ EOF;
 
             $routes .= <<<EOF
     // {$item->title}
-    \$router->{$item->method}('{$_route}', [\Jizhi\Admin\controller\AdminApiController::class, 'index']);
+    \$router->{$item->method}('{$_route}', [\jizhi\admin\controller\AdminApiController::class, 'index']);
 
 EOF;
         });

@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\middleware;
+namespace jizhi\admin\middleware;
 
 use Webman\Http\Request;
 use Webman\Http\Response;
 use Webman\MiddlewareInterface;
 
 // use plugin\saas\model\TenantModel;
-use Jizhi\Admin\support\SqlRecord;
+use jizhi\admin\support\SqlRecord;
 
 /**
  * 连接数据库

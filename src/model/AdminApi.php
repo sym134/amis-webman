@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
-use Jizhi\Admin\support\Apis\AdminBaseApi;
+use jizhi\admin\support\apis\AdminBaseApi;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasTimestamps;
 

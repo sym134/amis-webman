@@ -1,14 +1,14 @@
 <?php
 
-namespace Jizhi\Admin\command;
+namespace jizhi\admin\command;
 
 use Throwable;
-use Jizhi\Admin\service\AdminApiService;
+use jizhi\admin\service\AdminApiService;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Jizhi\Admin\service\AdminCodeGeneratorService;
-use Jizhi\Admin\support\CodeGenerator\ControllerGenerator;
+use jizhi\admin\service\AdminCodeGeneratorService;
+use jizhi\admin\support\code_generator\ControllerGenerator;
 
 class GenRouteCommand extends BaseCommand
 {
@@ -31,7 +31,7 @@ class GenRouteCommand extends BaseCommand
 //
 //             $routes .= <<<EOF
 //     // {$item->title}
-//     Route::{$item->method}('{$_route}', [\Jizhi\Admin\controller\AdminApiController::class, 'index']);
+//     Route::{$item->method}('{$_route}', [\jizhi\admin\controller\AdminApiController::class, 'index']);
 //
 // EOF;
 //         });

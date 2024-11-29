@@ -1,22 +1,22 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Request;
 use support\Response;
 use BadMethodCallException;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\model\AdminUser;
-use Jizhi\Admin\trait\ExportTrait;
-use Jizhi\Admin\trait\UploadTrait;
-use Jizhi\Admin\trait\ElementTrait;
-use Jizhi\Admin\trait\QueryPathTrait;
+use jizhi\admin\Admin;
+use jizhi\admin\model\AdminUser;
+use jizhi\admin\trait\ExportTrait;
+use jizhi\admin\trait\UploadTrait;
+use jizhi\admin\trait\ElementTrait;
+use jizhi\admin\trait\QueryPathTrait;
 use Psr\Container\NotFoundExceptionInterface;
-use Jizhi\Admin\service\AdminService;
+use jizhi\admin\service\AdminService;
 use Psr\Container\ContainerExceptionInterface;
-use Jizhi\Admin\trait\CheckActionTrait;
+use jizhi\admin\trait\CheckActionTrait;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Jizhi\Admin\support\Cores\JsonResponse;
+use jizhi\admin\support\cores\JsonResponse;
 
 abstract class AdminController
 {

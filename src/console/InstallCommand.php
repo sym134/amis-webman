@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\console;
+namespace jizhi\admin\console;
 
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Console\Command;
-use Jizhi\Admin\support\Cores\Database;
+use jizhi\admin\support\cores\Database;
 
 class InstallCommand extends Command
 {

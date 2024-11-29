@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\model\monitor;
+namespace jizhi\admin\model\monitor;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Jizhi\Admin\model\BaseModel as Model;
+use jizhi\admin\model\BaseModel as Model;
 
 /**
  * 登录日志

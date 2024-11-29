@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\model\system;
+namespace jizhi\admin\model\system;
 
-use Jizhi\Admin\model\BaseModel;
+use jizhi\admin\model\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Attachment extends BaseModel

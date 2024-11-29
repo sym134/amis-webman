@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\controller\system;
+namespace jizhi\admin\controller\system;
 
 use support\Request;
 use support\Response;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\system\ConfigService;
-use Jizhi\Admin\service\system\StorageService;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\system\ConfigService;
+use jizhi\admin\service\system\StorageService;
 
 class StorageController extends AdminController
 {

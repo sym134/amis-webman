@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\middleware;
+namespace jizhi\admin\middleware;
 
 use Webman\Event\Event;
 use Webman\Http\Request;
 use Webman\Http\Response;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Webman\MiddlewareInterface;
 
 class Authenticate implements MiddlewareInterface

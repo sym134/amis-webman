@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
-use Jizhi\Admin\model\AdminPage;
+use jizhi\admin\model\AdminPage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;

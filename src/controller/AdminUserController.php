@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\service\AdminUserService;
-use Jizhi\Admin\service\AdminRoleService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\service\AdminUserService;
+use jizhi\admin\service\AdminRoleService;
 
 /**
  * @property AdminUserService $service

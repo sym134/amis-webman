@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
 trait IconifyPickerTrait
 {
@@ -10,7 +10,7 @@ trait IconifyPickerTrait
      * @param string $name
      * @param string $label
      *
-     * @return \Jizhi\Admin\renderer\PickerControl
+     * @return \jizhi\admin\renderer\PickerControl
      */
     public function iconifyPicker(string $name = '', string $label = '')
     {

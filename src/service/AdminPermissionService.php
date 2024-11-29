@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Illuminate\Support\Arr;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Jizhi\Admin\model\AdminPermission;
+use jizhi\admin\model\AdminPermission;
 
 /**
  * @method AdminPermission getModel()

@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\exception;
+namespace jizhi\admin\exception;
 
 use support\Response;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 
 class AdminException extends \Exception
 {

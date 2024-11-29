@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use RegexIterator;
 use ReflectionClass;
@@ -9,8 +9,8 @@ use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\support\Cores\Database;
-use Jizhi\Admin\model\AdminRelationship;
+use jizhi\admin\support\cores\Database;
+use jizhi\admin\model\AdminRelationship;
 
 /**
  * @method AdminRelationship getModel()
@@ -108,9 +108,9 @@ class AdminRelationshipService extends AdminService
         $template = <<<PHP
 <?php
 
-namespace Jizhi\Admin\model; // webman
+namespace jizhi\admin\model; // webman
 
-use Jizhi\Admin\model\BaseModel as Model;
+use jizhi\admin\model\BaseModel as Model;
 
 class $className extends Model
 {

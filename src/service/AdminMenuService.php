@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Illuminate\Support\Arr;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\model\AdminMenu;
+use jizhi\admin\Admin;
+use jizhi\admin\model\AdminMenu;
 use Illuminate\Database\Eloquent\Builder;
 use support\Db as DB;
 

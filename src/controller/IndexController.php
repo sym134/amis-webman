@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Request;
 use support\Response;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\model\Plugin;
-use Jizhi\Admin\service\AdminPageService;
+use jizhi\admin\Admin;
+use jizhi\admin\model\Plugin;
+use jizhi\admin\service\AdminPageService;
 
 class IndexController extends AdminController
 {

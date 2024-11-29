@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\support;
+namespace jizhi\admin\support;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Process\Process;

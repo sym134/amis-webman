@@ -1,7 +1,7 @@
 <?php
 
-namespace Jizhi\Admin\trait;
-use Jizhi\Admin\support\Cores\Asset;
+namespace jizhi\admin\trait;
+use jizhi\admin\support\cores\Asset;
 
 trait AssetsTrait
 {

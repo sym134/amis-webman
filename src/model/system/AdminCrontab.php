@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\model\system;
+namespace jizhi\admin\model\system;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Jizhi\Admin\model\BaseModel as Model;
+use jizhi\admin\model\BaseModel as Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Jizhi\Admin\service\system\AdminCrontabService;
+use jizhi\admin\service\system\AdminCrontabService;
 
 /**
  * 定时任务

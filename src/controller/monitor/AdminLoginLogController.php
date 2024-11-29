@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\controller\monitor;
+namespace jizhi\admin\controller\monitor;
 
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\model\monitor\AdminLoginLog;
-use Jizhi\Admin\service\monitor\AdminLoginLogService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\model\monitor\AdminLoginLog;
+use jizhi\admin\service\monitor\AdminLoginLogService;
 
 /**
  * 登录日志

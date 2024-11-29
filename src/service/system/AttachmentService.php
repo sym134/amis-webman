@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\service\system;
+namespace jizhi\admin\service\system;
 
-use Jizhi\Admin\service\AdminService;
-use Jizhi\Admin\model\system\Attachment;
+use jizhi\admin\service\AdminService;
+use jizhi\admin\model\system\Attachment;
 
 class AttachmentService extends AdminService
 {

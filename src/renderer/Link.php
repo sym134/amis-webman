@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 /**
  * Link 链接展示控件。 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/link

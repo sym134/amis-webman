@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\console;
+namespace jizhi\admin\console;
 
 use Illuminate\Console\Command;
-use Jizhi\Admin\model\AdminUser;
-use Jizhi\Admin\model\AdminRole;
+use jizhi\admin\model\AdminUser;
+use jizhi\admin\model\AdminRole;
 
 class CreateUserCommand extends Command
 {

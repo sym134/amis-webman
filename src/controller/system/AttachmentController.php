@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\controller\system;
+namespace jizhi\admin\controller\system;
 
 use support\Response;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\model\system\Attachment;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\system\AttachmentService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\model\system\Attachment;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\system\AttachmentService;
 
 class AttachmentController extends AdminController
 {

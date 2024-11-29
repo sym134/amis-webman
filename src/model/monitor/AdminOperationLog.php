@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\model\monitor;
+namespace jizhi\admin\model\monitor;
 
-use Jizhi\Admin\model\BaseModel;
+use jizhi\admin\model\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class AdminOperationLog extends BaseModel

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Closure;
 use Throwable;
@@ -15,7 +15,7 @@ use Shopwwi\WebmanFilesystem\FilesystemFactory;
 /**
  * 存储服务
  * StorageService
- * Jizhi\Admin\service
+ * jizhi\admin\service
  *
  * Author:sym
  * Date:2024/6/27 上午7:23

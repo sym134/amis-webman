@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\service\monitor;
+namespace jizhi\admin\service\monitor;
 
-use Jizhi\Admin\service\AdminService;
-use Jizhi\Admin\model\monitor\AdminLoginLog;
+use jizhi\admin\service\AdminService;
+use jizhi\admin\model\monitor\AdminLoginLog;
 
 /**
  * 登录日志

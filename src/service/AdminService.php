@@ -1,17 +1,17 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Throwable;
 use support\Db;
 use support\Request;
 use support\Container;
 use Illuminate\Support\Arr;
-use Jizhi\Admin\renderer\Page;
+use jizhi\admin\renderer\Page;
 use Illuminate\Database\Eloquent\Model;
-use Jizhi\Admin\trait\ErrorTrait;
+use jizhi\admin\trait\ErrorTrait;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\renderer\TableColumn;
+use jizhi\admin\renderer\TableColumn;
 use Illuminate\Database\Eloquent\Collection;
 
 abstract class AdminService

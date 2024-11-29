@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
 use support\Model;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\trait\DatetimeFormatterTrait;
+use jizhi\admin\Admin;
+use jizhi\admin\trait\DatetimeFormatterTrait;
 
 class BaseModel extends Model
 {

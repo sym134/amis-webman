@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\controller\system;
+namespace jizhi\admin\controller\system;
 
 use support\Response;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\model\system\AdminCrontab;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\system\AdminCrontabService;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\model\system\AdminCrontab;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\system\AdminCrontabService;
 
 /**
  * 定时任务

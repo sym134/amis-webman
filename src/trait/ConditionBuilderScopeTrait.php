@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
 /**
  * 条件组合查询作用域

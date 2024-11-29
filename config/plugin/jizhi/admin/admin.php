@@ -1,9 +1,9 @@
 <?php
 
-use Jizhi\Admin\model\AdminUser;
-use Jizhi\Admin\model\AdminRole;
-use Jizhi\Admin\model\AdminMenu;
-use Jizhi\Admin\model\AdminPermission;
+use jizhi\admin\model\AdminUser;
+use jizhi\admin\model\AdminRole;
+use jizhi\admin\model\AdminMenu;
+use jizhi\admin\model\AdminPermission;
 
 return [
     // 应用名称

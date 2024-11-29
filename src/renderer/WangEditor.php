@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 
-use Jizhi\Admin\trait\UploadTrait;
+use jizhi\admin\trait\UploadTrait;
 
 /**
  * WangEditor

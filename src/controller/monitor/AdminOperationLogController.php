@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\controller\monitor;
+namespace jizhi\admin\controller\monitor;
 
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\monitor\AdminOperationLogService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\monitor\AdminOperationLogService;
 
 class AdminOperationLogController extends AdminController
 {

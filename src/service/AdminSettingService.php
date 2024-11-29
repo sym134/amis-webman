@@ -1,16 +1,16 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Exception;
 use support\Db;
 use ArrayAccess;
 use support\Cache;
 use support\Response;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Support\Arr;
 
-use Jizhi\Admin\model\AdminSetting;
+use jizhi\admin\model\AdminSetting;
 
 class AdminSettingService extends AdminService
 {

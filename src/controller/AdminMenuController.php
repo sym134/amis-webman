@@ -1,14 +1,14 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Response;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\service\AdminMenuService;
-use Jizhi\Admin\service\AdminPageService;
-use Jizhi\Admin\trait\IconifyPickerTrait;
+use jizhi\admin\Admin;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\service\AdminMenuService;
+use jizhi\admin\service\AdminPageService;
+use jizhi\admin\trait\IconifyPickerTrait;
 
 /**
  * @property AdminMenuService $service

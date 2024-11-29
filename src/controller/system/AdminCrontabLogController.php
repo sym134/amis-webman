@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\controller\system;
+namespace jizhi\admin\controller\system;
 
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\system\AdminCrontabLogService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\system\AdminCrontabLogService;
 
 /**
  * 定时任务日志

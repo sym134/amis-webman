@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\model\system;
+namespace jizhi\admin\model\system;
 
-use Jizhi\Admin\model\BaseModel as Model;
+use jizhi\admin\model\BaseModel as Model;
 
 /**
  * 定时任务日志

@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use Illuminate\Support\Arr;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\model\AdminRole;
+use jizhi\admin\Admin;
+use jizhi\admin\model\AdminRole;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;

@@ -1,18 +1,18 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\renderer\Service;
-use Jizhi\Admin\renderer\Operation;
-use Jizhi\Admin\renderer\CRUDTable;
-use Jizhi\Admin\renderer\LinkAction;
-use Jizhi\Admin\renderer\OtherAction;
-use Jizhi\Admin\renderer\DialogAction;
-use Jizhi\Admin\support\Cores\AdminPipeline;
-use Jizhi\Admin\renderer\ConditionBuilderControl;
+use jizhi\admin\Admin;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\renderer\Service;
+use jizhi\admin\renderer\Operation;
+use jizhi\admin\renderer\CRUDTable;
+use jizhi\admin\renderer\LinkAction;
+use jizhi\admin\renderer\OtherAction;
+use jizhi\admin\renderer\DialogAction;
+use jizhi\admin\support\cores\AdminPipeline;
+use jizhi\admin\renderer\ConditionBuilderControl;
 
 
 trait ElementTrait

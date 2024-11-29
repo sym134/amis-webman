@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin;
+namespace jizhi\admin;
 
 class Install
 {

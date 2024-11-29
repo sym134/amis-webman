@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\service\system;
+namespace jizhi\admin\service\system;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\service\AdminService;
-use Jizhi\Admin\model\system\AdminCrontab;
+use jizhi\admin\service\AdminService;
+use jizhi\admin\model\system\AdminCrontab;
 
 /**
  * 定时任务

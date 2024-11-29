@@ -1,6 +1,6 @@
 <?php
 
-use Jizhi\Admin\event\SystemUser;
+use jizhi\admin\event\SystemUser;
 
 return [
     'user.login' => [

@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\command;
+namespace jizhi\admin\command;
 
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\support\Cores\Database;
+use jizhi\admin\Admin;
+use jizhi\admin\support\cores\Database;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

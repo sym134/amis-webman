@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Response;
 use Illuminate\Support\Str;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\service\AdminApiService;
+use jizhi\admin\Admin;
+use jizhi\admin\service\AdminApiService;
 
 /**
  * @property AdminApiService $service

@@ -1,29 +1,29 @@
 <?php
 
 use Webman\Route;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\controller\AuthController;
-use Jizhi\Admin\controller\HomeController;
-use Jizhi\Admin\controller\IndexController;
-use Jizhi\Admin\controller\AdminRoleController;
-use Jizhi\Admin\controller\AdminUserController;
-use Jizhi\Admin\controller\AdminMenuController;
-use Jizhi\Admin\controller\DevTools\ApiController;
-use Jizhi\Admin\controller\system\CacheController;
-use Jizhi\Admin\controller\system\StorageController;
-use Jizhi\Admin\controller\DevTools\PagesController;
-use Jizhi\Admin\controller\DevTools\EditorController;
-use Jizhi\Admin\controller\AdminPermissionController;
-use Jizhi\Admin\controller\DevTools\PluginController;
-use Jizhi\Admin\controller\system\AttachmentController;
-use Jizhi\Admin\controller\system\AdminCrontabController;
-use Jizhi\Admin\controller\monitor\AdminLoginLogController;
-use Jizhi\Admin\controller\DevTools\RelationshipController;
-use Jizhi\Admin\controller\DevTools\CodeGeneratorController;
-use Jizhi\Admin\controller\system\AdminCrontabLogController;
-use Jizhi\Admin\controller\monitor\AdminOperationLogController;
+use jizhi\admin\Admin;
+use jizhi\admin\controller\AuthController;
+use jizhi\admin\controller\HomeController;
+use jizhi\admin\controller\IndexController;
+use jizhi\admin\controller\AdminRoleController;
+use jizhi\admin\controller\AdminUserController;
+use jizhi\admin\controller\AdminMenuController;
+use jizhi\admin\controller\dev_tools\ApiController;
+use jizhi\admin\controller\system\CacheController;
+use jizhi\admin\controller\system\StorageController;
+use jizhi\admin\controller\dev_tools\PagesController;
+use jizhi\admin\controller\dev_tools\EditorController;
+use jizhi\admin\controller\AdminPermissionController;
+use jizhi\admin\controller\dev_tools\PluginController;
+use jizhi\admin\controller\system\AttachmentController;
+use jizhi\admin\controller\system\AdminCrontabController;
+use jizhi\admin\controller\monitor\AdminLoginLogController;
+use jizhi\admin\controller\dev_tools\RelationshipController;
+use jizhi\admin\controller\dev_tools\CodeGeneratorController;
+use jizhi\admin\controller\system\AdminCrontabLogController;
+use jizhi\admin\controller\monitor\AdminOperationLogController;
 
-Route::get('/admin1', [Jizhi\Admin\controller\IndexController::class, 'index']);
+Route::get('/admin1', [jizhi\admin\controller\IndexController::class, 'index']);
 
 Route::get('/admin', fn() => Admin::view());
 

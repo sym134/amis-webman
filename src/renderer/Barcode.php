@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 /**
  * Barcode 条形码 https://aisuda.bce.baidu.com/amis/zh-CN/components/barcode

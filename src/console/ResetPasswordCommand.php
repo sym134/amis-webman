@@ -1,8 +1,8 @@
 <?php
 
-namespace Jizhi\Admin\console;
+namespace jizhi\admin\console;
 
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Console\Command;
 
 class ResetPasswordCommand extends Command

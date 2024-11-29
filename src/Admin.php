@@ -1,16 +1,16 @@
 <?php
 
-namespace Jizhi\Admin;
+namespace jizhi\admin;
 
 use support\Db;
 use Shopwwi\WebmanAuth\Facade\Auth;
-use Jizhi\Admin\trait\AssetsTrait;
-use Jizhi\Admin\support\Cores\Menu;
-use Jizhi\Admin\support\Cores\Context;
-use Jizhi\Admin\support\Cores\Permission;
-use Jizhi\Admin\support\Cores\JsonResponse;
-use Jizhi\Admin\service\AdminSettingService;
-use Jizhi\Admin\model\{AdminMenu, AdminRole, AdminUser, AdminPermission};
+use jizhi\admin\trait\AssetsTrait;
+use jizhi\admin\support\cores\Menu;
+use jizhi\admin\support\cores\Context;
+use jizhi\admin\support\cores\Permission;
+use jizhi\admin\support\cores\JsonResponse;
+use jizhi\admin\service\AdminSettingService;
+use jizhi\admin\model\{AdminMenu, AdminRole, AdminUser, AdminPermission};
 
 class Admin
 {
@@ -176,11 +176,11 @@ class Admin
     public static function middleware(): array
     {
         return [
-            \Jizhi\Admin\middleware\ConnectionDatabase::class,
-            \Jizhi\Admin\middleware\ForceHttps::class,
-            \Jizhi\Admin\middleware\AutoSetLocale::class,
-            \Jizhi\Admin\middleware\Authenticate::class,
-            \Jizhi\Admin\middleware\Permission::class,
+            \jizhi\admin\middleware\ConnectionDatabase::class,
+            \jizhi\admin\middleware\ForceHttps::class,
+            \jizhi\admin\middleware\AutoSetLocale::class,
+            \jizhi\admin\middleware\Authenticate::class,
+            \jizhi\admin\middleware\Permission::class,
         ];
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\process;
+namespace jizhi\admin\process;
 
 use Workerman\Crontab\Crontab;
-use Jizhi\Admin\service\system\AdminCrontabService;
+use jizhi\admin\service\system\AdminCrontabService;
 
 class Task
 {

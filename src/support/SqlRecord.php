@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\support;
+namespace jizhi\admin\support;
 
 use support\Db;
 use Illuminate\Database\Events\QueryExecuted;
@@ -8,7 +8,7 @@ use Illuminate\Database\Events\QueryExecuted;
 /**
  *
  * SqlRecord webman
- * Jizhi\Admin\support
+ * jizhi\admin\support
  *
  * Author:sym
  * Date:2024/10/30 09:19

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\support;
+namespace jizhi\admin\support;
 
 /**
  * Zip helper.

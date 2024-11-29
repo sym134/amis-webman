@@ -1,16 +1,16 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Db;
 use Webman\Route;
 use Illuminate\Support\Str;
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\renderer\Tag;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\service\AdminMenuService;
-use Jizhi\Admin\service\AdminPermissionService;
+use jizhi\admin\Admin;
+use jizhi\admin\renderer\Tag;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\service\AdminMenuService;
+use jizhi\admin\service\AdminPermissionService;
 
 /**
  * @property AdminPermissionService $service

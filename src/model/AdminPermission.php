@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
 use support\Request;
 use Illuminate\Support\Str;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class AdminPermission extends BaseModel

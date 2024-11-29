@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
 class AdminSetting extends BaseModel
 {

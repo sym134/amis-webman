@@ -1,13 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\service\system;
-
-use Jizhi\Admin\utils\Cache;
+namespace jizhi\admin\service\system;
 
 /**
  * 缓存
  * CacheService
- * Jizhi\Admin\service\system
+ * jizhi\admin\service\system
  *
  * Author:sym
  * Date:2024/6/29 上午7:49

@@ -1,12 +1,12 @@
 <?php
 
-namespace Jizhi\Admin\service;
+namespace jizhi\admin\service;
 
 use ReflectionClass;
 use Illuminate\Support\Arr;
-use Jizhi\Admin\Admin;
+use jizhi\admin\Admin;
 use Illuminate\Database\Eloquent\Builder;
-use Jizhi\Admin\model\AdminCodeGenerator;
+use jizhi\admin\model\AdminCodeGenerator;
 
 /**
  * @method AdminCodeGenerator getModel()
@@ -133,7 +133,7 @@ class AdminCodeGeneratorService extends AdminService
         return collect(get_class_methods(amis()))
             ->filter(fn($item) => $item != 'make')
             ->map(function ($item) {
-                $renderer = new ReflectionClass('\\Jizhi\\Admin\\renderer\\' . $item); // webman
+                $renderer = new ReflectionClass('\\jizhi\\admin\\renderer\\' . $item); // webman
                 $_doc = $renderer->getDocComment();
                 $_doc = preg_replace("/[^\x{4e00}-\x{9fa5}]/u", "", $_doc);
                 $_doc = $_doc ? trim(str_replace('文档', '', $_doc)) : '';

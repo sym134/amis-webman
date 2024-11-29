@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\model;
+namespace jizhi\admin\model;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Casts\Attribute;

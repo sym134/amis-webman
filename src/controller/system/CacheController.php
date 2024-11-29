@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\controller\system;
+namespace jizhi\admin\controller\system;
 
 use support\Request;
 use support\Response;
-use Jizhi\Admin\controller\AdminController;
-use Jizhi\Admin\service\system\CacheService;
+use jizhi\admin\controller\AdminController;
+use jizhi\admin\service\system\CacheService;
 
 class CacheController extends AdminController
 {

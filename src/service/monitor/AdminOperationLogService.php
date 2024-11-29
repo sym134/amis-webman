@@ -1,9 +1,9 @@
 <?php
 
-namespace Jizhi\Admin\service\monitor;
+namespace jizhi\admin\service\monitor;
 
-use Jizhi\Admin\service\AdminService;
-use Jizhi\Admin\model\monitor\AdminOperationLog;
+use jizhi\admin\service\AdminService;
+use jizhi\admin\model\monitor\AdminOperationLog;
 
 class AdminOperationLogService extends AdminService
 {

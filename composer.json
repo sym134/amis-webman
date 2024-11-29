@@ -1,6 +1,5 @@
 {
   "name": "jizhi/amis-webman",
-  "description": "基于 OwlAdmin 修改的 Webman",
   "version": "4.0.6",
   "authors": [
     {
@@ -45,7 +44,7 @@
       "src/support/helpers.php"
     ],
     "psr-4": {
-      "Jizhi\\Admin\\": "src"
+      "jizhi\\admin\\": "src"
     }
   },
   "require-dev": {

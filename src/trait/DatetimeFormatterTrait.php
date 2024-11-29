@@ -1,6 +1,6 @@
 <?php
 
-namespace Jizhi\Admin\trait;
+namespace jizhi\admin\trait;
 
 /**
  * @mixin \Illuminate\Database\Eloquent\Model

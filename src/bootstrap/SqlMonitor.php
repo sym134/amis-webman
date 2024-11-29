@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\bootstrap;
+namespace jizhi\admin\bootstrap;
 
 use Webman\Bootstrap;
 use Workerman\Worker;
-use Jizhi\Admin\support\SqlRecord;
+use jizhi\admin\support\SqlRecord;
 
 class SqlMonitor implements Bootstrap
 {

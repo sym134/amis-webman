@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\plugin;
+namespace jizhi\admin\plugin;
 
-use Jizhi\Admin\model\Plugin;
+use jizhi\admin\model\Plugin;
 use Illuminate\Database\Eloquent\Collection;
-use Jizhi\Admin\service\AdminService;
+use jizhi\admin\service\AdminService;
 
 class PluginService extends AdminService
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Jizhi\Admin\event;
+namespace jizhi\admin\event;
 
-use Jizhi\Admin\Admin;
-use Jizhi\Admin\model\AdminMenu;
-use Jizhi\Admin\service\monitor\AdminLoginLogService;
-use Jizhi\Admin\service\monitor\AdminOperationLogService;
+use jizhi\admin\Admin;
+use jizhi\admin\model\AdminMenu;
+use jizhi\admin\service\monitor\AdminLoginLogService;
+use jizhi\admin\service\monitor\AdminOperationLogService;
 
 class SystemUser
 {

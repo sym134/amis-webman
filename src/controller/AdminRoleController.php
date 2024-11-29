@@ -1,13 +1,13 @@
 <?php
 
-namespace Jizhi\Admin\controller;
+namespace jizhi\admin\controller;
 
 use support\Response;
-use Jizhi\Admin\renderer\Page;
-use Jizhi\Admin\renderer\Form;
-use Jizhi\Admin\renderer\DrawerAction;
-use Jizhi\Admin\service\AdminRoleService;
-use Jizhi\Admin\service\AdminPermissionService;
+use jizhi\admin\renderer\Page;
+use jizhi\admin\renderer\Form;
+use jizhi\admin\renderer\DrawerAction;
+use jizhi\admin\service\AdminRoleService;
+use jizhi\admin\service\AdminPermissionService;
 
 /**
  * @property AdminRoleService $service

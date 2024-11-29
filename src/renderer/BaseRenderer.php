@@ -1,10 +1,10 @@
 <?php
 
-namespace Jizhi\Admin\renderer;
+namespace jizhi\admin\renderer;
 
 use JsonSerializable;
 use Illuminate\Support\Traits\Macroable;
-use Jizhi\Admin\support\Cores\AdminPipeline;
+use jizhi\admin\support\cores\AdminPipeline;
 
 class BaseRenderer implements JsonSerializable
 {
