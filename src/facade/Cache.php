@@ -4,7 +4,7 @@ namespace jizhi\admin\facade;
 
 use Closure;
 use support\Cache as SymfonyCache;
-use function jizhi\admin\utils\request;
+
 
 class Cache
 {

@@ -8,7 +8,6 @@ use Illuminate\Hashing\ArgonHasher;
 use Illuminate\Hashing\BcryptHasher;
 use Illuminate\Hashing\Argon2IdHasher;
 use Illuminate\Contracts\Hashing\Hasher;
-use function jizhi\admin\utils\hashing\config;
 
 class Hash implements Hasher
 {
@@ -97,7 +96,7 @@ class Hash implements Hasher
      */
     public function getDefaultDriver()
     {
-        return config('plugin.yzh52521.hashing.app.driver', 'bcrypt');
+        return 'bcrypt';
     }
 
     /**
@@ -107,7 +106,7 @@ class Hash implements Hasher
      */
     public function createBcryptDriver()
     {
-        return new BcryptHasher(config('plugin.yzh52521.hashing.app.bcrypt') ?? []);
+        return new BcryptHasher(['rounds'=>10]);
     }
 
     /**
@@ -117,7 +116,11 @@ class Hash implements Hasher
      */
     public function createArgonDriver()
     {
-        return new ArgonHasher(config('plugin.yzh52521.hashing.app.argon') ?? []);
+        return new ArgonHasher([
+            'memory'  => 65536,
+            'threads' => 1,
+            'time'    => 4,
+        ]);
     }
 
     /**
@@ -127,7 +130,11 @@ class Hash implements Hasher
      */
     public function createArgon2idDriver()
     {
-        return new Argon2IdHasher(config('plugin.yzh52521.hashing.app.argon') ?? []);
+        return new Argon2IdHasher([
+            'memory'  => 65536,
+            'threads' => 1,
+            'time'    => 4,
+        ]);
     }
 
     /**
