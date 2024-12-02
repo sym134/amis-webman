@@ -21,24 +21,6 @@ class Admin
         return new static();
     }
 
-    // public static function boot(): void
-    // {
-    //     Relationships::boot();
-    //     Api::boot();
-
-    // Sanctum 指定模型表
-    // if (class_exists(Sanctum::class)) {
-    //     Sanctum::usePersonalAccessTokenModel(PersonalAccessToken::class);
-    // }
-
-    //Octane 清空sql记录
-    // if (class_exists('\Laravel\Octane\Events\RequestReceived')) {
-    //     Event::listen(\Laravel\Octane\Events\RequestReceived::class, function ($event) {
-    //         SqlRecord::$sql = [];
-    //     });
-    // }
-    // }
-
     public static function response(): JsonResponse
     {
         return new JsonResponse();
@@ -62,7 +44,7 @@ class Admin
 
     public static function guard()
     {
-        return Auth::guard(self::config('admin.auth.guard') ?: 'admin');
+        return Auth::guard(self::config('app.auth.guard') ?: 'admin');
     }
 
     /**
@@ -97,7 +79,7 @@ class Admin
      */
     public static function adminMenuModel(): string
     {
-        return self::config('admin.models.admin_menu', AdminMenu::class);
+        return self::config('app.models.admin_menu', AdminMenu::class);
     }
 
     /**
@@ -105,7 +87,7 @@ class Admin
      */
     public static function adminPermissionModel(): string
     {
-        return self::config('admin.models.admin_permission', AdminPermission::class);
+        return self::config('app.models.admin_permission', AdminPermission::class);
     }
 
     /**
@@ -113,7 +95,7 @@ class Admin
      */
     public static function adminRoleModel(): string
     {
-        return self::config('admin.models.admin_role', AdminRole::class);
+        return self::config('app.models.admin_role', AdminRole::class);
     }
 
     /**
@@ -121,7 +103,7 @@ class Admin
      */
     public static function adminUserModel(): string
     {
-        return self::config('admin.models.admin_user', AdminUser::class);
+        return self::config('app.models.admin_user', AdminUser::class);
     }
 
     public static function config($key, $default = '')
@@ -134,7 +116,7 @@ class Admin
     public static function view($apiPrefix = ''): array|string|null
     {
         if (!$apiPrefix) {
-            $apiPrefix = self::config('admin.route.prefix');
+            $apiPrefix = self::config('app.route.prefix');
         }
 
         if (is_file(public_path('admin-assets/index.html'))) {

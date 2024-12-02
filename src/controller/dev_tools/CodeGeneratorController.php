@@ -557,7 +557,7 @@ class CodeGeneratorController extends AdminController
         $defaultPath = $this->service->getDefaultPath();
 
         $savePaths = [$defaultPath];
-        // webman owl 插件获取
+
         foreach (PluginService::make()->getPlugins() as $plugin) {
             $savePaths[] = [
                 'label' => $plugin->name,

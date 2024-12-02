@@ -17,7 +17,7 @@ class AuthController extends AdminController
 
     public function login(Request $request)
     {
-        if (Admin::config('admin.auth.login_captcha')) {
+        if (Admin::config('app.auth.login_captcha')) {
             if (!$request->post('captcha')) {
                 return $this->response()
                     ->fail(admin_trans('admin.required', ['attribute' => admin_trans('admin.captcha')]));
@@ -218,7 +218,7 @@ JS,
 
     public function currentUser(): Response
     {
-        if (!Admin::config('admin.auth.enable')) {
+        if (!Admin::config('app.auth.enable')) {
             return $this->response()->success([]);
         }
 

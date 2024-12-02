@@ -23,21 +23,21 @@ class IndexController extends AdminController
     public function settings(): Response
     {
         $prefix = '';
-        $localeOptions = Admin::config('admin.layout.locale_options') ?? [
+        $localeOptions = Admin::config('app.layout.locale_options') ?? [
             'en'    => 'English',
             'zh_CN' => '简体中文',
         ];
         return $this->response()->success([
             'nav'      => Admin::getNav(),
             'assets'   => Admin::getAssets(),
-            'app_name' => Admin::config('admin.name'),
-            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.admin.translation.locale')), // webman
-            'layout'   => Admin::config('admin.layout'),
-            'logo'     => url(Admin::config('admin.logo')),
+            'app_name' => Admin::config('app.name'),
+            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.app.translation.locale')), // webman
+            'layout'   => Admin::config('app.layout'),
+            'logo'     => url(Admin::config('app.logo')),
 
-            'login_captcha'          => Admin::config('admin.auth.login_captcha'),
+            'login_captcha'          => Admin::config('app.auth.login_captcha'),
             'locale_options'         => map2options($localeOptions),
-            'show_development_tools' => Admin::config('admin.show_development_tools'),
+            'show_development_tools' => Admin::config('app.show_development_tools'),
             'system_theme_setting'   => Admin::setting()->get($prefix . 'system_theme_setting'),
             'enabled_extensions'     => Plugin::query()->where('is_enabled', 1)->pluck('name')?->toArray(),
         ]);

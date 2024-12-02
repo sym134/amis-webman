@@ -37,7 +37,7 @@ trait ElementTrait
      */
     protected function backButton()
     {
-        $path   = str_replace(Admin::config('admin.route.prefix'), '', request()->path());
+        $path   = str_replace(Admin::config('app.route.prefix'), '', request()->path());
         $script = sprintf('window.$owl.hasOwnProperty(\'closeTabByPath\') && window.$owl.closeTabByPath(\'%s\')', $path);
 
         $action = amis()
@@ -338,7 +338,7 @@ trait ElementTrait
      */
     protected function baseForm(bool $back = true)
     {
-        $path = str_replace(Admin::config('admin.route.prefix'), '', request()->path());
+        $path = str_replace(Admin::config('app.route.prefix'), '', request()->path());
 
         $form = amis()->Form()->panelClassName('px-48 m:px-0')->title(' ')->promptPageLeave();
 

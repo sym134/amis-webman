@@ -43,11 +43,11 @@ class Permission
      */
     public function authIntercept($request): array
     {
-        if (!Admin::config('admin.auth.enable')) {
+        if (!Admin::config('app.auth.enable')) {
             return [false, null];
         }
 
-        $excepted = collect(Admin::config('admin.auth.except', []))
+        $excepted = collect(Admin::config('app.auth.except', []))
             ->merge($this->authExcept)
             ->map(fn($path) => $this->pathFormatting($path))
             // webman
@@ -66,17 +66,17 @@ class Permission
      */
     public function permissionIntercept(Request $request, $args): bool
     {
-        if (Admin::config('admin.auth.permission') === false) {
+        if (Admin::config('app.auth.permission') === false) {
             return false;
         }
 
-        if ($request->path() == Admin::config('admin.route.prefix')) {
+        if ($request->path() == Admin::config('app.route.prefix')) {
             return false;
         }
 
-        $excepted = collect(Admin::config('admin.auth.except', []))
+        $excepted = collect(Admin::config('app.auth.except', []))
             ->merge($this->permissionExcept)
-            ->merge(Admin::config('admin.show_development_tools') ? ['/dev_tools*'] : [])
+            ->merge(Admin::config('app.show_development_tools') ? ['/dev_tools*'] : [])
             ->map(fn($path) => $this->pathFormatting($path))
             ->contains(fn($except) => collect($except == '/' ? $except : trim($except, '/'))->contains(fn($pattern) => Str::is($pattern, trim($request->path(), '/'))));
 
@@ -119,7 +119,7 @@ class Permission
 
     private function pathFormatting($path): string
     {
-        $prefix = '/' . trim(Admin::config('admin.route.prefix'), '/');
+        $prefix = '/' . trim(Admin::config('app.route.prefix'), '/');
 
         $prefix = ($prefix === '/') ? '' : $prefix;
 

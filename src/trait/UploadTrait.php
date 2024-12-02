@@ -72,7 +72,7 @@ trait UploadTrait
 
         $filesystem = StorageService::disk();
         try {
-            $file_info = $filesystem->path(Admin::config('admin.upload.directory.rich'))->upload($file);
+            $file_info = $filesystem->path(Admin::config('app.upload.directory.rich'))->upload($file);
         } catch (Throwable $e) {
             return $this->response()->fail($e->getMessage());
         }
@@ -95,7 +95,7 @@ trait UploadTrait
 
         $filesystem = StorageService::disk();
         try {
-            $file_info = $filesystem->path(Admin::config('admin.upload.directory.' . $type))->upload($file);
+            $file_info = $filesystem->path(Admin::config('app.upload.directory.' . $type))->upload($file);
             $res = AttachmentService::make()->store([
                 'storage_mode' => $file_info->adapter,
                 'origin_name'  => $file_info->origin_name,

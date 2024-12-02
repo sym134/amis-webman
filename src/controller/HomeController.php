@@ -89,8 +89,8 @@ JS
                     ->justify('center')
                     ->alignItems('center')
                     ->items([
-                        amis()->Image()->src(url(Admin::config('admin.logo'))),
-                        amis()->Wrapper()->className('text-3xl mt-9 font-bold')->body(Admin::config('admin.name')),
+                        amis()->Image()->src(url(Admin::config('app.logo'))),
+                        amis()->Wrapper()->className('text-3xl mt-9 font-bold')->body(Admin::config('app.name')),
                         amis()->Flex()->className('px-24 w-full mt-5')->justify('space-around')->items([
                             $link('GitHub', 'https://github.com/slowlyo/owl-admin'),
                             $link('Official website', 'https://owladmin.com'),

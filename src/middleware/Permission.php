@@ -7,14 +7,21 @@ use Webman\Http\Response;
 use jizhi\admin\Admin;
 use Webman\MiddlewareInterface;
 
+/**
+ * 权限
+ * Permission
+ * jizhi\admin\middleware
+ *
+ * Author:sym
+ * Date:2024/12/2 22:03
+ * Company:极智科技
+ */
 class Permission implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        if (!is_null($request->route) && strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
-            if (Admin::permission()->permissionIntercept($request, '')) {
-                return Admin::response()->fail(admin_trans('admin.unauthorized'));
-            }
+        if (Admin::permission()->permissionIntercept($request, '')) {
+            return Admin::response()->fail(admin_trans('admin.unauthorized'));
         }
         return $handler($request);
     }

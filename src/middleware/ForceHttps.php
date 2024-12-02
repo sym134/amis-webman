@@ -7,14 +7,21 @@ use Webman\Http\Response;
 use jizhi\admin\Admin;
 use Webman\MiddlewareInterface;
 
+/**
+ * 判断https
+ * ForceHttps
+ * jizhi\admin\middleware
+ *
+ * Author:sym
+ * Date:2024/12/2 22:03
+ * Company:极智科技
+ */
 class ForceHttps implements MiddlewareInterface
 {
     public function process(Request $request, callable $handler): Response
     {
-        if (!is_null($request->route) && strpos($request->route->getPath(), '/' . config('plugin.jizhi.admin.admin.route.prefix')) === 0) {
-            if ($request->protocolVersion() === '1.1' && Admin::config('admin.https')) {
-                return Admin::response()->additional(['code' => 301])->fail('请使用https');
-            }
+        if ($request->protocolVersion() === '1.1' && Admin::config('app.https')) {
+            return Admin::response()->additional(['code' => 301])->fail('请使用https');
         }
 
         return $handler($request);

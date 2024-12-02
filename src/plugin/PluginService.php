@@ -44,7 +44,7 @@ class PluginService extends AdminService
     public function path(string $path = null): string
     {
         if (!$this->path) {
-            $this->path = config('plugin.jizhi.admin.admin.extension.dir');
+            $this->path = config('plugin.jizhi.admin.app.extension.dir');
             if (!is_dir($this->path)) {
                 throw new \Exception("The {$this->path} is not a directory.");
             }

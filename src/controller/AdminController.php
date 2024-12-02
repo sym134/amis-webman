@@ -46,7 +46,7 @@ abstract class AdminController
             $this->service = $this->serviceName::make();
         }
 
-        $this->adminPrefix = Admin::config('admin.route.prefix');
+        $this->adminPrefix = Admin::config('app.route.prefix');
 
         $this->queryPath = str_replace($this->adminPrefix . '/', '', request()->path());
     }

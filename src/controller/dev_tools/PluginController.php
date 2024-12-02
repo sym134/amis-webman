@@ -177,7 +177,7 @@ class PluginController extends AdminController
                         amis()->Alert()
                             ->level('info')
                             ->showIcon()
-                            ->body(admin_trans('admin.extensions.create_tips', ['dir' => config('plugin.jizhi.admin.admin.extension.dir')])),
+                            ->body(admin_trans('admin.extensions.create_tips', ['dir' => config('plugin.jizhi.admin.app.extension.dir')])),
                         amis()->TextControl()
                             ->name('name')
                             ->label(admin_trans('admin.extensions.form.name'))

@@ -104,7 +104,7 @@ class AdminCodeGeneratorService extends AdminService
      */
     public function getNamespace($name, $app = null): string
     {
-        $namespace = collect(explode('\\', Admin::config('admin.route.namespace')));
+        $namespace = collect(explode('\\', Admin::config('app.route.namespace')));
 
         $namespace->pop();
 

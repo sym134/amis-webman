@@ -60,7 +60,7 @@ class SystemUser
         if (preg_match("/\{[^}]+\}/", $path)) {
             $path = rtrim(preg_replace("/\{[^}]+\}/", '', $path), '/');
         }
-        $path = '/' . ltrim($path, '/' . Admin::config('admin.route.prefix'));
+        $path = '/' . ltrim($path, '/' . Admin::config('app.route.prefix'));
         $menu = AdminMenu::where('url', $path)->first();
         if (!is_null($menu)) {
             return $menu->getAttribute('title');

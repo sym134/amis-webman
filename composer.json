@@ -1,6 +1,6 @@
 {
   "name": "jizhi/amis-webman",
-  "version": "4.0.6",
+  "version": "dev-master",
   "authors": [
     {
       "name": "sym",
@@ -26,7 +26,6 @@
     "workerman/crontab": "^1.0",
     "taoser/webman-validate": "^1.7",
     "shopwwi/webman-filesystem": "^1.1",
-    "yzh52521/webman-throttle": "^1.1",
     "shopwwi/webman-auth": "^1.1",
     "rap2hpoutre/fast-excel": "^5.5",
     "vlucas/phpdotenv": "^5.6",

@@ -15,7 +15,7 @@ class AdminUser extends BaseModel
 
     public function __construct(array $attributes = [])
     {
-        $this->setConnection(Admin::config('admin.database.connection'));
+        $this->setConnection(Admin::config('app.database.connection'));
 
         parent::__construct($attributes);
     }
@@ -30,7 +30,7 @@ class AdminUser extends BaseModel
         $storage = StorageService::disk(); // webman
 
         return Attribute::make(
-            get: fn($value) => $value ? $storage->url($value) : url(Admin::config('admin.default_avatar')),
+            get: fn($value) => $value ? $storage->url($value) : url(Admin::config('app.default_avatar')),
             set: fn($value) => str_replace($storage->url(''), '', $value)
         );
     }

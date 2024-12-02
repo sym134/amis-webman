@@ -23,8 +23,6 @@ use jizhi\admin\controller\dev_tools\CodeGeneratorController;
 use jizhi\admin\controller\system\AdminCrontabLogController;
 use jizhi\admin\controller\monitor\AdminOperationLogController;
 
-Route::get('/admin1', [jizhi\admin\controller\IndexController::class, 'index']);
-
 Route::get('/admin', fn() => Admin::view());
 
 
@@ -138,4 +136,4 @@ Route::group('/' . config('plugin.jizhi.admin.admin.route.prefix'), function () 
             });
         });
     }
-});
+})->middleware(Admin::middleware());

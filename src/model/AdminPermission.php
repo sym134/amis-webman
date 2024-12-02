@@ -39,7 +39,7 @@ class AdminPermission extends BaseModel
         }
         $method  = $this->http_method;
         $matches = array_map(function ($path) use ($method) {
-            $path = trim(Admin::config('admin.route.prefix'), '/') . $path;
+            $path = trim(Admin::config('app.route.prefix'), '/') . $path;
             if (Str::contains($path, ':')) {
                 [$method, $path] = explode(':', $path);
                 $method = explode(',', $method);

@@ -6,7 +6,7 @@ use jizhi\admin\service\StorageService;
 if (!function_exists('admin_url')) {
     function admin_url($path = null, $needPrefix = false): string
     {
-        $prefix = $needPrefix ? '/' . \jizhi\admin\Admin::config('admin.route.prefix') : ''; // webman
+        $prefix = $needPrefix ? '/' . \jizhi\admin\Admin::config('app.route.prefix') : ''; // webman
 
         return $prefix . '/' . trim($path, '/');
     }
@@ -61,7 +61,7 @@ if (!function_exists('admin_resource_full_path')) {
         } else if ($server) {
             $src = rtrim($server, '/') . '/' . ltrim($path, '/');
         } else {
-            $disk = \jizhi\admin\Admin::config('admin.upload.disk');
+            $disk = \jizhi\admin\Admin::config('app.upload.disk');
 
             if (config("filesystems.disks.{$disk}")) {
                 $src = StorageService::disk()->url($path);
@@ -70,7 +70,7 @@ if (!function_exists('admin_resource_full_path')) {
             }
         }
         $scheme = 'http:';
-        if (\jizhi\admin\Admin::config('admin.https', false)) {
+        if (\jizhi\admin\Admin::config('app.https', false)) {
             $scheme = 'https:';
         }
         return preg_replace('/^http[s]{0,1}:/', $scheme, $src, 1);
@@ -80,7 +80,7 @@ if (!function_exists('admin_resource_full_path')) {
 if (!function_exists('admin_path')) {
     function admin_path($path = ''): string
     {
-        return ucfirst(config('plugin.jizhi.admin.admin.directory')) . ($path ? DIRECTORY_SEPARATOR . $path : $path);
+        return ucfirst(config('plugin.jizhi.admin.app.directory')) . ($path ? DIRECTORY_SEPARATOR . $path : $path);
     }
 }
 
@@ -186,7 +186,7 @@ if (!function_exists('admin_extension_path')) {
      */
     function admin_extension_path(?string $path = ''): string
     {
-        $dir = rtrim(config('plugin.jizhi.admin.admin.extension.dir'), '/') ?: base_path('extensions');
+        $dir = rtrim(config('plugin.jizhi.admin.app.extension.dir'), '/') ?: base_path('extensions');
 
         $path = ltrim($path, '/');
 
