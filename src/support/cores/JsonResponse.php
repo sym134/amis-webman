@@ -55,7 +55,7 @@ class JsonResponse
                 'sql' => SqlRecord::$sql,
             ];
         }
-        return json(array_merge($this->additionalData, ['data' => $data])); // webman json()
+        return json(array_merge($this->additionalData, ['data' => $data]));
     }
 
     /**

@@ -67,7 +67,7 @@ class AdminRelationshipService extends AdminService
 
     public function allModels(): array
     {
-        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(app_path('admin/model'))); // webman todo 目前只有app，没有插件的model
+        $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(app_path('admin/model'))); // todo 目前只有app，没有插件的model
         $phpFiles = new RegexIterator($iterator, '/^.+\.php$/i', RegexIterator::GET_MATCH);
 
         foreach ($phpFiles as $phpFile) {
@@ -108,7 +108,7 @@ class AdminRelationshipService extends AdminService
         $template = <<<PHP
 <?php
 
-namespace jizhi\admin\model; // webman
+namespace jizhi\admin\model;
 
 use jizhi\admin\model\BaseModel as Model;
 
@@ -118,7 +118,7 @@ class $className extends Model
 }
 PHP;
 
-        $path = app_path("model/$className.php"); // webman
+        $path = app_path("model/$className.php");
 
         admin_abort_if(file_exists($path), admin_trans('admin.relationships.model_exists'));
 

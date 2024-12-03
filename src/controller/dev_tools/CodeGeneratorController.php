@@ -563,9 +563,9 @@ class CodeGeneratorController extends AdminController
                 'label' => $plugin->name,
                 'value' => [
                     'directory'       => $plugin->name,
-                    'controller_path' => '/plugin/' . $plugin->name . '/app/' . 'controller/', // webman
-                    'service_path'    => '/plugin/' . $plugin->name . '/app/' . 'service/', // webman
-                    'model_path'      => '/plugin/' . $plugin->name . '/app/' . 'model/', // webman
+                    'controller_path' => '/plugin/' . $plugin->name . '/app/' . 'controller/',
+                    'service_path'    => '/plugin/' . $plugin->name . '/app/' . 'service/',
+                    'model_path'      => '/plugin/' . $plugin->name . '/app/' . 'model/',
                 ],
             ];
         }
@@ -592,7 +592,7 @@ class CodeGeneratorController extends AdminController
             'component_options'  => $this->service->getComponentOptions(),
         ];
 
-        if ($directReturn === true) { // webman
+        if ($directReturn === true) {
             return $data;
         }
 

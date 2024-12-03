@@ -260,7 +260,7 @@ class RelationshipController extends AdminController
         }
         $table = $table ?: $model::make()->getTable();
 
-        $columns = Db::schema()->getColumnListing($table); // webman
+        $columns = Db::schema()->getColumnListing($table);
 
         return $this->response()->success($columns);
     }

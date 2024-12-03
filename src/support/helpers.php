@@ -6,7 +6,7 @@ use jizhi\admin\service\StorageService;
 if (!function_exists('admin_url')) {
     function admin_url($path = null, $needPrefix = false): string
     {
-        $prefix = $needPrefix ? '/' . \jizhi\admin\Admin::config('app.route.prefix') : ''; // webman
+        $prefix = $needPrefix ? '/' . \jizhi\admin\Admin::config('app.route.prefix') : '';
 
         return $prefix . '/' . trim($path, '/');
     }
@@ -22,7 +22,7 @@ if (!function_exists('table_columns')) {
      */
     function table_columns($tableName): array
     {
-        return \support\Db::schema()->getColumnListing($tableName); // webman
+        return \support\Db::schema()->getColumnListing($tableName);
     }
 }
 
@@ -94,7 +94,7 @@ if (!function_exists('amis')) {
     function amis($type = null): \jizhi\admin\renderer\Amis|\jizhi\admin\renderer\Component
     {
         if (filled($type)) {
-            return \jizhi\admin\renderer\Component::make()->setType($type); // webman
+            return \jizhi\admin\renderer\Component::make()->setType($type);
         }
 
         return \jizhi\admin\renderer\Amis::make();
@@ -120,10 +120,10 @@ if (!function_exists('file_upload_handle')) {
      */
     function file_upload_handle(): \Illuminate\Database\Eloquent\Casts\Attribute
     {
-        $storage = StorageService::disk(); // webman
+        $storage = StorageService::disk();
 
         return \Illuminate\Database\Eloquent\Casts\Attribute::make(
-            get: fn($value) => $value ? $storage->url($value) : '', // webman
+            get: fn($value) => $value ? $storage->url($value) : '',
             set: fn($value) => str_replace($storage->url(''), '', $value)
         );
     }
@@ -137,7 +137,7 @@ if (!function_exists('file_upload_handle_multi')) {
      */
     function file_upload_handle_multi(): \Illuminate\Database\Eloquent\Casts\Attribute
     {
-        $storage = StorageService::disk(); // webman
+        $storage = StorageService::disk();
 
         return \Illuminate\Database\Eloquent\Casts\Attribute::make(
             get: function ($value) use ($storage) {
@@ -275,7 +275,6 @@ if (!function_exists('map2options')) {
     }
 }
 
-// webman 版本
 if (!function_exists('admin_trans')) {
     function admin_trans(string|null $key = null, array $replace = [], string|null $locale = null): ?string
     {
@@ -287,8 +286,6 @@ if (!function_exists('admin_trans')) {
     }
 }
 
-
-// webman 增加
 if (!function_exists('plugin_path')) {
     function plugin_path(string $path = ''): string
     {

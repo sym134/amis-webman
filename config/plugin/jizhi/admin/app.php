@@ -18,13 +18,13 @@ return [
     'default_avatar' => '/admin-assets/default-avatar.png',
 
     // 应用安装目录
-    'directory'      => app_path('admin'), // webman
+    'directory'      => app_path('admin'),
 
     // 应用路由
     'route'          => [
         'prefix'               => 'admin-api',
         'domain'               => null,
-        'namespace'            => 'app\\admin\\controller', // webman
+        'namespace'            => 'app\\admin\\controller',
         'middleware'           => ['admin'],
         // 不包含额外路由, 配置后, 不会追加新增/详情/编辑页面路由
         'without_extra_routes' => [

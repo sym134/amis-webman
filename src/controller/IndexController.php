@@ -31,7 +31,7 @@ class IndexController extends AdminController
             'nav'      => Admin::getNav(),
             'assets'   => Admin::getAssets(),
             'app_name' => Admin::config('app.name'),
-            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.app.translation.locale')), // webman
+            'locale'   => settings()->get('admin_locale', config('plugin.jizhi.admin.app.translation.locale')),
             'layout'   => Admin::config('app.layout'),
             'logo'     => url(Admin::config('app.logo')),
 
@@ -103,6 +103,6 @@ class IndexController extends AdminController
      */
     public function pageSchema(): Response
     {
-        return $this->response()->success(AdminPageService::make()->get(request()->get('sign'))); // webman
+        return $this->response()->success(AdminPageService::make()->get(request()->get('sign')));
     }
 }

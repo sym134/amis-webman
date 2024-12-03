@@ -15,7 +15,7 @@ class AdminPageService extends AdminService
 {
     protected string $modelName = AdminPage::class;
 
-    public string $cacheKeyPrefix = 'admin_page-'; // webman 缓存不允许:
+    public string $cacheKeyPrefix = 'admin_page-';
 
     public function saving(&$data, $primaryKey = ''): void
     {

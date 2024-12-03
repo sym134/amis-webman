@@ -61,13 +61,13 @@ class AdminPermission extends BaseModel
         } else {
             $path = trim($match['path'], '/');
         }
-        if (!collect($path)->contains(fn ($pattern) => Str::is($pattern, trim($request->path(),'/')))) { // // webman
+        if (!collect($path)->contains(fn ($pattern) => Str::is($pattern, trim($request->path(),'/')))) { //
             return false;
         }
         $method = collect($match['method'])->filter()->map(function ($method) {
             return strtoupper($method);
         });
-        return $method->isEmpty() || $method->contains($request->method()); // // webman
+        return $method->isEmpty() || $method->contains($request->method()); //
     }
 
     protected static function boot(): void

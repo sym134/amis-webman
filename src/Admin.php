@@ -108,7 +108,7 @@ class Admin
 
     public static function config($key, $default = '')
     {
-        $key = 'plugin.jizhi.admin.' . $key; // webman
+        $key = 'plugin.jizhi.admin.' . $key;
         return config($key, $default);
     }
 

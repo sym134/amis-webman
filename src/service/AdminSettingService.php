@@ -111,7 +111,7 @@ class AdminSettingService extends AdminService
             return $this->query()->where('key', $key)->value('values') ?? $default;
         }
 
-        $value = cache()->rememberForever($this->getCacheKey($key), function () use ($key) { // webman cache()->rememberForever
+        $value = cache()->rememberForever($this->getCacheKey($key), function () use ($key) {
             return $this->query()->where('key', $key)->value('values');
         });
 
@@ -165,7 +165,7 @@ class AdminSettingService extends AdminService
      */
     public function clearCache($key): void
     {
-        Cache::delete($this->getCacheKey($key)); // webman
+        Cache::delete($this->getCacheKey($key));
     }
 
     public function getCacheKey($key): string

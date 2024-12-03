@@ -22,7 +22,7 @@ class AuthController extends AdminController
                 return $this->response()
                     ->fail(admin_trans('admin.required', ['attribute' => admin_trans('admin.captcha')]));
             }
-            if (strtolower(cache()->pull($request->post('sys_captcha'))) != strtolower($request->post('captcha'))) { // webman $request->post
+            if (strtolower(cache()->pull($request->post('sys_captcha'))) != strtolower($request->post('captcha'))) {
                 return $this->response()->fail(admin_trans('admin.captcha_error'));
             }
         }
@@ -48,8 +48,8 @@ class AuthController extends AdminController
                     return $this->response()->fail(admin_trans('admin.user_disabled'));
                 }
 
-                // $module = Admin::currentModule(true); // webman
-                // $prefix = $module ? $module . '.' : ''; // webman
+                // $module = Admin::currentModule(true);
+                // $prefix = $module ? $module . '.' : '';
                 $token = $this->guard()->login($user)->access_token;
 
                 // 登录事件

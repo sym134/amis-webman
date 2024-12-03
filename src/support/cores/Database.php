@@ -7,8 +7,6 @@ use support\Db as DB;
 use jizhi\admin\facade\Hash;
 use Illuminate\Database\Schema\Blueprint;
 
-// webman
-
 class Database
 {
     private string|null $moduleName;
@@ -422,7 +420,7 @@ class Database
     public static function getTables(): array
     {
         try {
-            return collect(json_decode(json_encode(Db::schema()->getAllTables()), true)) // webman
+            return collect(json_decode(json_encode(Db::schema()->getAllTables()), true))
             ->map(fn($i) => config('database.default') == 'sqlite' ? $i['name'] : array_shift($i))
                 ->toArray();
         } catch (\Throwable $e) {

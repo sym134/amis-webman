@@ -27,7 +27,7 @@ class AdminUser extends BaseModel
 
     public function avatar(): Attribute
     {
-        $storage = StorageService::disk(); // webman
+        $storage = StorageService::disk();
 
         return Attribute::make(
             get: fn($value) => $value ? $storage->url($value) : url(Admin::config('app.default_avatar')),

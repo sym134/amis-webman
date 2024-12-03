@@ -110,3 +110,10 @@ http://127.0.0.1:8780/admin
 ## 常见问题
 ### 相片路径
 打开后台》系统管理 / 存储设置，修改【域名】
+
+
+## 相关的包
+shopwwi/webman-filesystem
+taoser/webman-validate
+shopwwi/webman-filesystem
+shopwwi/webman-auth

@@ -97,7 +97,7 @@ class Permission
     {
         $middlewarePrefix = 'admin.permission:';
 
-        $middleware = collect($request->route // webman $request->route
+        $middleware = collect($request->route
         ?->middleware())->first(fn($middleware) => Str::startsWith($middleware, $middlewarePrefix));
 
         if (!$middleware) {
