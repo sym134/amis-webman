@@ -159,7 +159,7 @@ class ControllerGenerator extends BaseGenerator
         $primaryKey     = $this->model->primary_key ?? 'id';
         $primaryKeyName = strtoupper($primaryKey);
 
-        $content .= "\t\t\t" . "amis()->TextControl('{$primaryKey}', '{$primaryKeyName}')->static()," . PHP_EOL;
+        $content .= "\t\t\t" . "amis()->TextControl('{$primaryKey}', admin_trans('{$primaryKeyName}'))->static()," . PHP_EOL;
 
         foreach ($this->model->columns as $column) {
             if (!$this->columnInTheScope($column, 'detail')) {
@@ -195,7 +195,7 @@ class ControllerGenerator extends BaseGenerator
 
         $component = data_get($column, $type);
         if ($componentType = data_get($component, $type . '_type')) {
-            $item = "amis()->{$componentType}('{$column['name']}', '{$label}')";
+            $item = "amis()->{$componentType}('{$column['name']}', admin_trans('{$label}'))";
             if ($property = Arr::get($component, $type . '_property')) {
                 $item .= $this->buildComponentProperty($property);
             }
@@ -204,9 +204,9 @@ class ControllerGenerator extends BaseGenerator
         }
 
         return match ($type) {
-            'list_component'   => "amis()->TableColumn('{$column['name']}', '{$label}')",
-            'form_component'   => "amis()->TextControl('{$column['name']}', '{$label}')",
-            'detail_component' => "amis()->TextControl('{$column['name']}', '{$label}')->static()",
+            'list_component'   => "amis()->TableColumn('{$column['name']}', admin_trans('{$label}'))",
+            'form_component'   => "amis()->TextControl('{$column['name']}', admin_trans('{$label}'))",
+            'detail_component' => "amis()->TextControl('{$column['name']}', admin_trans('{$label}'))->static()",
         };
     }
 

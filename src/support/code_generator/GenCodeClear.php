@@ -17,8 +17,16 @@ class GenCodeClear
 
     public function handle($data): void
     {
-        $records  = $this->getRecord($data['id']);
+        $records = $this->getRecord($data['id']);
         $selected = explode(',', $data['selected']);
+
+        if (in_array('translate_en', $selected)) {
+            @unlink($records['translate_en']);
+        }
+
+        if (in_array('translate_zh_CN', $selected)) {
+            @unlink($records['translate_zh_CN']);
+        }
 
         if (in_array('controller', $selected)) {
             @unlink($records['controller']);
@@ -51,19 +59,14 @@ class GenCodeClear
     {
         $record = AdminCodeGenerator::find($id);
 
-        $arr = explode('/', $record->model_name);
-
-        // webman 待取消
-        // if ($arr[0] == Admin::module()->namespace) {
-        //     $this->module = $arr[1];
-        // }
-
         $controllerPath = BaseGenerator::guessClassFileName(str_replace('/', '\\', $record->controller_name));
-        $modelPath      = BaseGenerator::guessClassFileName(str_replace('/', '\\', $record->model_name));
-        $servicePath    = BaseGenerator::guessClassFileName(str_replace('/', '\\', $record->service_name));
-        $tableName      = $record->table_name;
-        $migrationPath  = $this->getMigrationFileName($tableName, $record->model_name);
-        $menuRecord     = $this->getMenu($record->menu_info);
+        $modelPath = BaseGenerator::guessClassFileName(str_replace('/', '\\', $record->model_name));
+        $servicePath = BaseGenerator::guessClassFileName(str_replace('/', '\\', $record->service_name));
+        $tableName = $record->table_name;
+        $migrationPath = $this->getMigrationFileName($tableName, $record->model_name);
+        $menuRecord = $this->getMenu($record->menu_info);
+        $translateENPath = base_path('resource/translations/en/' . $record->table_name . '.php');
+        $translateZHPath = base_path('resource/translations/zh_CN/' . $record->table_name . '.php');
 
         $checkFile = function ($path) {
             if (is_array($path)) {
@@ -78,11 +81,13 @@ class GenCodeClear
             'model'      => $checkFile($modelPath),
             'service'    => $checkFile($servicePath),
             'migration'  => $checkFile($migrationPath),
+            'translate_en'  => $checkFile($translateENPath),
+            'translate_zh_CN'  => $checkFile($translateZHPath),
             'table'      => Db::Schema()->hasTable($tableName) ? $tableName : '',
         ];
 
         if ($menuRecord) {
-            $content['menu']    = sprintf('[%s] %s(%s)', $menuRecord->id, $menuRecord->title, $menuRecord->url);
+            $content['menu'] = sprintf('[%s] %s(%s)', $menuRecord->id, $menuRecord->title, $menuRecord->url);
             $content['menu_id'] = $menuRecord->id;
         }
 

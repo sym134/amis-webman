@@ -122,7 +122,7 @@ class Generator
                         ->whereNotIn('COLUMN_NAME', ['created_at', 'updated_at', 'deleted_at'])
                         ->map(function ($v) {
                             $v['COLUMN_TYPE'] = strtolower($v['COLUMN_TYPE']);
-                            $v['DATA_TYPE']   = strtolower($v['DATA_TYPE']);
+                            $v['DATA_TYPE'] = strtolower($v['DATA_TYPE']);
 
                             if (Str::contains($v['COLUMN_TYPE'], 'unsigned')) {
                                 $v['DATA_TYPE'] .= '@unsigned';
@@ -201,14 +201,22 @@ class Generator
     public function generate($id, $needs = []): string
     {
         $record = AdminCodeGenerator::find($id);
-        $model  = AdminCodeGenerator::find($id);
-        $needs  = collect(filled($needs) ? $needs : $record->needs);
+        $model = AdminCodeGenerator::find($id);
+        $needs = collect(filled($needs) ? $needs : $record->needs);
 
         $successMessage = fn($type, $path) => "<b class='text-success'>{$type} generated successfully!</b><br>{$path}<br><br>";
 
-        $paths   = [];
+        $paths = [];
         $message = '';
         try {
+            // 语言
+            $path = TranslateGenerator::make($record)->generate();
+            foreach ($path as $value) {
+                $message .= $successMessage('Translate', $value);
+                $paths[] = $value;
+            }
+
+
             // Model
             if ($needs->contains('need_model')) {
                 $path = ModelGenerator::make($model)->generate();
@@ -243,25 +251,25 @@ class Generator
             if ($needs->contains('need_database_migration')) {
                 $path = MigrationGenerator::make($record)->generate();
 
-                $message     .= $successMessage('Migration', $path);
+                $message .= $successMessage('Migration', $path);
                 $migratePath = str_replace(base_path(), '', $path);
-                $paths[]     = $path;
+                $paths[] = $path;
             }
 
             // 创建数据库表
             if ($needs->contains('need_create_table')) {
-                if (DB::schema()->hasTable($record->table_name)) { // webman
+                if (DB::schema()->hasTable($record->table_name)) {
                     abort(400, "Table [{$record->table_name}] already exists!");
                 }
 
                 if ($migratePath) {
-                    $output = runCommand('migrate:run --path=' . $migratePath)[0]; //  webman
+                    $output = runCommand('migrate:run --path=' . $migratePath)[0];
                 } else {
                     $migratePath = $record->save_path['directory'];
                     $migratePath = $migratePath === 'app' ? base_path('/database/migrations') : plugin_path($migratePath . '/database/migrations');
-                    $output = runCommand('migrate:run --path=' . $migratePath)[0]; // webman
+                    $output = runCommand('migrate:run --path=' . $migratePath)[0];
                 }
-                $message .= $successMessage('Table', $output); // webman
+                $message .= $successMessage('Table', $output);
             }
         } catch (Throwable $e) {
             if (count($paths) > 0) {
